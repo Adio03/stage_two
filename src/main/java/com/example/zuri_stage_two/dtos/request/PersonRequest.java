@@ -1,14 +1,17 @@
 package com.example.zuri_stage_two.dtos.request;
 
+import com.example.zuri_stage_two.data.models.Gender;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
-public class PersonDto {
+@Builder
+public class PersonRequest {
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNumber;
-    private String sex;
+    private Gender gender;
 }
