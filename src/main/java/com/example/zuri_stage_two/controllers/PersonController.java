@@ -24,7 +24,7 @@ public class PersonController {
         this.service = service;
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/api", method = RequestMethod.POST)
     public ResponseEntity<?> createPerson(@RequestBody PersonRequest request) {
         try {
             PersonResponse response = service.createPerson(request);
@@ -34,7 +34,7 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
     }
-    @RequestMapping(value = "/update/{email}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/api/{email}", method = RequestMethod.PUT)
     public ResponseEntity<?> updatePerson(@PathVariable String email, @RequestBody PersonRequest request) {
         try {
             UpdateResponse response = service.updatedPerson(email, request);
@@ -44,7 +44,7 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
     }
-    @RequestMapping(value = "/findByFirstName/{firstName}", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/{firstName}", method = RequestMethod.GET)
     public ResponseEntity<?> findByFirstName(@PathVariable String firstName) {
         try {
             List<Person> person = service.findByFirstName(firstName);
@@ -54,7 +54,7 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
     }
-    @RequestMapping(value = "/findByLastName/{lastName}", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/{lastName}", method = RequestMethod.GET)
     public ResponseEntity<?> findByLastName(@PathVariable String lastName) {
         try {
             List<Person> person = service.findByLastName(lastName);
@@ -66,7 +66,7 @@ public class PersonController {
         }
     }
 
-    @RequestMapping(value = "/delete/{email}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/{email}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteByEmail(@PathVariable String email) {
         try {
             service.deletePersonByEmail(email);

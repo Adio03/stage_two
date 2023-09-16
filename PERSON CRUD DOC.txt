@@ -1,0 +1,94 @@
+    `                                                   Overview
+This project is a Java Spring Boot application that provides API endpoints for managing Person records.
+It includes features for Creating, Updating, Retrieving and Deleting the Person information.
+This documentation provides details about the API endpoints, standard request and response formats, sample usage, known limitations,
+and setup instructions.
+
+                                                     Table of Contents
+1. Endpoints and Request/Response Formats
+2. Sample API Usage
+3. Known Limitations and Assumptions 
+4. Local Setup and Deployment Instructions 
+5. Endpoints and Request/Response Formats 
+
+                                                    Add Person: POST /api
+# Request Format:
+{
+    "firstName": "Olajumoke",
+    "lastName": "Janet",
+    "email": "olajumoke@gmail.com",
+    "phoneNumber":"09089766534",
+    "gender": "FEMALE"
+
+}
+    
+# Response Format:
+    {
+       
+        "message": "Person Successfully created"
+        
+    }
+                                                Get Person by email: GET /api/{firstName}
+# Request Format:
+    "url"/api/{firstsName}
+# Response Format:
+    {
+    "firstName": "jason",
+    "lastName": "Ebuka",
+    "email": "jack@gmail.com",
+    "phoneNumber":"09045388990",
+    "gender": "MALE
+}
+                                             
+                                         Get Person by Phone Number: GET /api/{lastName}
+# Request Format:
+     "url"/api/{lastName}
+# Response Format:
+
+        {
+              
+    "firstName": "jason",
+    "lastName": "Ebuka",
+    "email": "jack@gmail.com",
+    "phoneNumber":"09045388990",
+    "gender": "MALE"
+
+}
+    ]
+                                               Update Person by ID: PUT /api/{email}
+# Request Format:
+   {
+    "firstName": "jason",
+    "lastName": "Ebuka",
+    "email": "jack@gmail.com",
+    "phoneNumber":"09045388990",
+    "gender": "MALE"
+
+}
+        }
+    }
+# Response Format:
+  {
+    "firstName": "jason",
+    "lastName": "Ebuka",
+    "email": "jack@gmail.com",
+    "phoneNumber":"09045388990",
+    "message":"successfully updated"
+
+}
+        }
+                                              Delete Person by email: DELETE /api/{email}
+# Request Format:
+    "url"/api/{email}
+# Response Format:
+        {email} Successfully deleted
+
+                                                    Known Limitations and Assumptions 
+This API assumes that person information are unique based on their email addresses and phone number. 
+
+                                                            Local Setup
+Check the README file...
+                                            
+                                                       Deployment Instructions
+
+[//]: # (To set up and deploy the hngTask-2 API on a server, follow these steps:)
