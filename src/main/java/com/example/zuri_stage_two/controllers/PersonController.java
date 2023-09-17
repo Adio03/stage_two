@@ -54,7 +54,7 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
     }
-    @RequestMapping(value = "/api/{lastName}", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/firstname/{lastName}", method = RequestMethod.GET)
     public ResponseEntity<?> findByLastName(@PathVariable String lastName) {
         try {
             List<Person> person = service.findByLastName(lastName);
@@ -66,7 +66,7 @@ public class PersonController {
         }
     }
 
-    @RequestMapping(value = "/api/{email}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/lastname/{email}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteByEmail(@PathVariable String email) {
         try {
             service.deletePersonByEmail(email);
