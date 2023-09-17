@@ -1,4 +1,4 @@
-    `                                                   Overview
+    ` Overview
 This project is a Java Spring Boot application that provides API endpoints for managing Person records.
 It includes features for Creating, Updating, Retrieving and Deleting the Person information.
 This documentation provides details about the API endpoints, standard request and response formats, sample usage, known limitations,
@@ -7,8 +7,8 @@ and setup instructions.
                                                      Table of Contents
 1. Endpoints and Request/Response Formats
 2. Sample API Usage
-3. Known Limitations and Assumptions 
-4. Local Setup and Deployment Instructions 
+3. Known Limitations and Assumptions
+4. Local Setup and Deployment Instructions
 5. Endpoints and Request/Response Formats 
 
                                                     Add Person: POST /api
@@ -28,7 +28,7 @@ and setup instructions.
         "message": "Person Successfully created"
         
     }
-                                                Get Person by email: GET /api/{firstName}
+                                                Get Person by email: GET /api/firstname/{firstName}
 # Request Format:
     "url"/api/{firstsName}
 # Response Format:
@@ -40,7 +40,7 @@ and setup instructions.
     "gender": "MALE
 }
                                              
-                                         Get Person by Phone Number: GET /api/{lastName}
+                                         Get Person by Phone Number: GET /api/lastname{lastName}
 # Request Format:
      "url"/api/{lastName}
 # Response Format:
@@ -73,7 +73,7 @@ and setup instructions.
     "lastName": "Ebuka",
     "email": "jack@gmail.com",
     "phoneNumber":"09045388990",
-    "message":"successfully updated"
+    "message": "successfully updated"
 
 }
         }
@@ -83,11 +83,11 @@ and setup instructions.
 # Response Format:
         {email} Successfully deleted
 
-                                                    Known Limitations and Assumptions 
+                                                    Known Limitations and Assumptions
 This API assumes that person information are unique based on their email addresses and phone number. 
 
                                                             Local Setup
-Check the README file...
+Checks the README file...
                                             
                                                        Deployment Instructions
 

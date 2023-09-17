@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping
 public class PersonController {
 
-    private PersonServiceImpl service;
+    private final PersonServiceImpl service;
 
     public PersonController(PersonServiceImpl service) {
         this.service = service;
